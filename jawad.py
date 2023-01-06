@@ -833,7 +833,7 @@ def fcrack(uid,pwx,tl):
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
             'accept-encoding': 'gzip, deflate, br',
             'accept-language': 'en-US,en;q=0.9',
-            'cookie': 'sb=nKBSYqRECxyL7RuJr8vc0xu1; datr=nKBSYvrx9hfYlie57qaPOHCi; locale=en_US; m_pixel_ratio=1.25; dpr=1.25; wd=456x486; fr=0hLscfSFT8A5vSA7Q.AWU7Mbg65F1LpIqxpm9DpRZ-Lzs.Bjtru5.df.AAA.0.0.BjuAng.AWUDtvHzWk4',
+            
             'referer': 'https://free.facebook.com/',
             'sec-ch-ua': '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"',
             'sec-ch-ua-mobile': '?0',
